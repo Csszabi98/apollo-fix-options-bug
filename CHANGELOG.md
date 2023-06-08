@@ -1,3 +1,84 @@
+# Changelog
+
+## v4.0.0-beta.5
+
+
+### 🚀 Enhancements
+
+  - UseLazyQuery load returns boolean to make is easier to refetch (dcb1768)
+  - **ts:** Update types to account for changes in TypeScript 4.8 (#1454)
+  - Allow global tracking outside of components (5967e16)
+
+### 🩹 Fixes
+
+  - Don't call variables if query is disabled + fix enabling race conditions, fix #1243, fix #1422 (#1243, #1422)
+  - Events not registered in case of immediate trigger, fix #1154 (#1154)
+  - @vue/apollo-composable ESM settings, fix #1462 (#1463, #1462)
+  - Avoid multiple on error calls without usage of errorPolicy 'all' (#1461)
+  - Ssr export paths, fix #1469 (#1469)
+  - Initialize currentDocument early, fix #1325 (#1325)
+  - **ts:** Allow null on `userLazyQuery` `load` fn, fix #1386 (#1386)
+  - **ssr:** Handle result/error set before serverPrefetch call, fix #1429 (#1429)
+
+### 📖 Documentation
+
+  - Subscriptions configuration docs updated to describe graphql-ws configuration. (#1449)
+
+### 🏡 Chore
+
+  - Update lockfile to v6.0 (81ea32c)
+  - Update sheep/release-tag (cf7917e)
+
+### ✅ Tests
+
+  - Config cypress downloads (32c95de)
+  - Demo useLazyQuery with immediate load (53554b8)
+  - Enabled (db7d79c)
+
+### 🤖 CI
+
+  - Switch to github actions (25c31d2)
+  - Enable on v4 branch (bc3d80c)
+
+### ❤️  Contributors
+
+- Guillaume Chau ([@Akryum](http://github.com/Akryum))
+- Gibran Amparan ([@gibranamparan](http://github.com/gibranamparan))
+- Alessia Bellisario <alessia@apollographql.com>
+- Dominik Klein <dk@zammad.com>
+- Changwan Jun ([@wan2land](http://github.com/wan2land))
+
+
+# [4.0.0-beta.4](https://github.com/vuejs/vue-apollo/compare/v4.0.0-beta.3...v4.0.0-beta.4) (2023-02-22)
+
+
+### Features
+
+* improve ESM support ([2623b32](https://github.com/vuejs/vue-apollo/commit/2623b32d6c999cfa677b3b36969bd6b5b782d387))
+
+
+
+# [4.0.0-beta.3](https://github.com/vuejs/vue-apollo/compare/v4.0.0-beta.2...v4.0.0-beta.3) (2023-02-21)
+
+
+### Bug Fixes
+
+* **ssr:** error not bubbling up ([18fe206](https://github.com/vuejs/vue-apollo/commit/18fe206761eba0af05971dff34113d5396e6e6bf))
+
+
+
+# [4.0.0-beta.2](https://github.com/vuejs/vue-apollo/compare/v4.0.0-beta.1...v4.0.0-beta.2) (2023-02-03)
+
+
+### Bug Fixes
+
+* **@vue/apollo-option:** ssr cleanup function fails to run ([#1424](https://github.com/vuejs/vue-apollo/issues/1424)) ([#1425](https://github.com/vuejs/vue-apollo/issues/1425)) ([8dfe93b](https://github.com/vuejs/vue-apollo/commit/8dfe93b82679fac42b8d1509febc97e7faeed1e0))
+* hydration error, revert [#1388](https://github.com/vuejs/vue-apollo/issues/1388), fix [#1432](https://github.com/vuejs/vue-apollo/issues/1432) ([9302d4d](https://github.com/vuejs/vue-apollo/commit/9302d4d4a55541bb49292463d8176d0527c06ce9))
+* ignore next result only if not loading ([1e24d21](https://github.com/vuejs/vue-apollo/commit/1e24d2110c3ea6ee80590c2b6578fef45a2e448e))
+* typo in useResult deprecation message ([#1414](https://github.com/vuejs/vue-apollo/issues/1414)) ([3728928](https://github.com/vuejs/vue-apollo/commit/372892855d76622128ac560e8fadc689c50675bc))
+
+
+
 # [4.0.0-beta.1](https://github.com/vuejs/vue-apollo/compare/v4.0.0-alpha.20...v4.0.0-beta.1) (2022-10-05)
 
 

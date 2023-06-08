@@ -9,7 +9,7 @@ import {
   onBeforeUnmount,
   nextTick,
 } from 'vue-demi'
-import {
+import type {
   OperationVariables,
   SubscriptionOptions,
   FetchResult,
@@ -17,7 +17,7 @@ import {
   ObservableSubscription,
   TypedDocumentNode,
   ApolloError,
-} from '@apollo/client/core'
+} from '@apollo/client/core/index.js'
 import { throttle, debounce } from 'throttle-debounce'
 import { ReactiveFunction } from './util/ReactiveFunction'
 import { paramToRef } from './util/paramToRef'
@@ -105,7 +105,7 @@ export function useSubscription<TResult = any, TVariables extends OperationVaria
 
 export function useSubscription <
   TResult,
-  TVariables
+  TVariables extends Record<string, unknown>
 > (
   document: DocumentParameter<TResult, TVariables>,
   variables: VariablesParameter<TVariables> | undefined = undefined,

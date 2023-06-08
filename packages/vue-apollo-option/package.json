@@ -1,11 +1,19 @@
 {
   "name": "@vue/apollo-option",
-  "version": "4.0.0-alpha.20",
+  "version": "4.0.0-beta.5",
   "description": "Use Apollo and GraphQL with Vue.js using the `apollo` option",
   "main": "dist/vue-apollo-option.umd.js",
   "module": "dist/vue-apollo-option.esm.js",
   "unpkg": "dist/vue-apollo-option.min.js",
-  "typings": "types/index.d.ts",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/vue-apollo-option.esm.js",
+      "require": "./dist/vue-apollo-option.umd.js"
+    },
+    "./*": "./*"
+  },
   "scripts": {
     "build": "pnpm run build:browser && pnpm run build:es && pnpm run build:umd",
     "build:browser": "rollup --config build/rollup.config.browser.js",
@@ -46,7 +54,7 @@
     "throttle-debounce": "^3.0.1"
   },
   "devDependencies": {
-    "@apollo/client": "^3.6.9",
+    "@apollo/client": "^3.7.7",
     "@babel/core": "^7.18.5",
     "@babel/plugin-proposal-class-properties": "^7.17.12",
     "@babel/plugin-transform-for-of": "^7.18.1",
